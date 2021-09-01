@@ -1,0 +1,28 @@
+{
+  "name": "sav-19-communications",
+  "version": "1.0.0",
+  "description": "Communications library for SAV-19.",
+  "author": "Néstor Jódar Toledo",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "start": "npm run clean && npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run",
+    "rebuild": "npm run clean && npm run build",
+    "lint": "eslint --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {}
+}
